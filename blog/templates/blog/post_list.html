@@ -3,7 +3,19 @@
         <title>Jordan's Blog</title>
     </head>
     <body>
-        <p>Yo, this is jordan welcome to my page hit me up wit my given contact.</p>
+      {% for post in posts %}
+ <div>
+     <p>published: {{ post.published_date }}</p>
+     <h1><a href="">{{ post.title }}</a></h1>
+     <p>{{ post.text|linebreaksbr }}</p>
+ </div>
+          {% endfor %}
+
+
+
+
+
+
         <p>Hi.</p>
     </body>
 </html>
